@@ -2,7 +2,7 @@ package IdenticalNumbers;
 
 public class IdenticalNumbers {
 
-    public static void printArray(int[] Arr, int counter){
+    private static void printArray(int[] Arr, int counter){
         for (int i=0; i < counter; i++){
             System.out.println("Array["+i+"]= "+Arr[i]);
         }

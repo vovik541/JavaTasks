@@ -6,7 +6,7 @@ public class Letter {
     final public static int ASCII_A = (int)'A';
     final public static int ASCII_Z = (int)'Z';
 
-    public static int checkMessageStatus(int huntedLetter, int userLetter){
+    private static int checkMessageStatus(int huntedLetter, int userLetter){
         if (userLetter < ASCII_A || userLetter > ASCII_Z){
             return 0;
         } else if (huntedLetter > userLetter){
@@ -18,7 +18,7 @@ public class Letter {
         }
     }
 
-    public static void showMessage (int messageStatus, int count){
+    private static void showMessage (int messageStatus, int count){
         switch (messageStatus){
             case 0: System.out.println("Please, check the rules clearly!"); break;
             case 1: System.out.println("Please, try your luck: ..."); break;
@@ -29,11 +29,11 @@ public class Letter {
         }
     }
 
-    public static int normilizeToInt(char letter){
+    private static int normilizeToInt(char letter){
         return (int)String.valueOf(letter).toUpperCase().charAt(0);
     }
 
-    public static int getUserInput(){
+    private static int getUserInput(){
         Scanner scanner = new Scanner(System.in);
         int userLetter = normilizeToInt(scanner.next().charAt(0));
         return userLetter;

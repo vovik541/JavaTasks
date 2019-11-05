@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TwentyOne {
 
-    public static boolean isAss(int pikedCard){
+    private static boolean isAss(int pikedCard){
         if (pikedCard == 11){
             return true;
         } else {
@@ -12,7 +12,7 @@ public class TwentyOne {
         }
     }
 
-    public static void showMessage(int gameState){
+    private static void showMessage(int gameState){
 
         switch (gameState){
             case 0: System.out.println("The game started. Do you want to take a card? y-YES/ n-NO");break;
@@ -23,7 +23,7 @@ public class TwentyOne {
         }
     }
 
-    public static void showPikedCard(int pikedCard){
+    private static void showPikedCard(int pikedCard){
         switch (pikedCard){
             case 11:System.out.println("Your card is A (1<->11). Please, write '1' or '11'");break;
             case 12:System.out.println("Your card is J (2)");break;
@@ -33,13 +33,13 @@ public class TwentyOne {
         }
     }
 
-    public static int gesAssDecision(){
+    private static int gesAssDecision(){
         Scanner scanner = new Scanner(System.in);
         int assChoice = scanner.nextInt();
         return assChoice;
     }
 
-    public static int getUserDecision(){
+    private static int getUserDecision(){
         Scanner scanner = new Scanner(System.in);
         char userDecision = scanner.next().charAt(0);
         if (userDecision == 'y'){
@@ -51,11 +51,11 @@ public class TwentyOne {
         }
     }
 
-    public static int getCard(){
+    private static int getCard(){
         return (int) (Math.random() * 100 % 14 +1);
     }
 
-    public static int getComputerAccount(){
+    private static int getComputerAccount(){
         int computerAccount = 0;
         int computerCard;
 
@@ -72,7 +72,7 @@ public class TwentyOne {
         return computerAccount;
     }
 
-    public static int changeUserAccount(int userAccount, int piKedCard, int ass){
+    private static int changeUserAccount(int userAccount, int piKedCard, int ass){
         if(piKedCard > 11){
             return userAccount + piKedCard - 10;
         } else if (piKedCard == 11){
