@@ -2,12 +2,14 @@ package Letter;
 
 import java.util.Scanner;
 
+/*Please, check branch "1_Letter". There is newer variant of this task (with tests)*/
+
 public class Letter {
-    final public static int ASCII_A = (int)'A';
-    final public static int ASCII_Z = (int)'Z';
+    final public static int ASCII_MIN = (int)'A';
+    final public static int ASCII_MAX = (int)'Z';
 
     private static int checkMessageStatus(int huntedLetter, int userLetter){
-        if (userLetter < ASCII_A || userLetter > ASCII_Z){
+        if (userLetter < ASCII_MIN || userLetter > ASCII_MAX){
             return 0;
         } else if (huntedLetter > userLetter){
             return 2;
@@ -39,8 +41,12 @@ public class Letter {
         return userLetter;
     }
 
+    public static int generateLetter (){
+        return (int) (Math.random()*100 % (ASCII_MAX - ASCII_MIN) + ASCII_MIN);
+    }
+
     public static void letter (){
-        int huntedLetter = normilizeToInt('C');
+        int huntedLetter = generateLetter();
         int messageStatus = 1;
         int userLetter;
         int count = 0;
@@ -54,6 +60,8 @@ public class Letter {
 
         showMessage(messageStatus,count);
     }
+
+    /*Please, check branch "1_Letter". There is newer variant of this task (with tests)*/
 
     public static void main(String[] args) {
         letter();

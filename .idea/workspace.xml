@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8696c39a-3a33-44f0-a37f-bd7f00db9446" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Letter/Letter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Letter/Letter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Palindrome/Palindrome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Palindrome/Palindrome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/WineCatalog/WineCatalog$Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/WineCatalog/WineCatalog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/WineCatalog/WineCatalog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Letter/Letter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Letter/Letter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Palindrome/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palindrome/Palindrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WineCatalog/WineCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WineCatalog/WineCatalog.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Palindrome">
+  <component name="RunManager" selected="Application.WineCatalog">
     <configuration name="Letter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Letter.Letter" />
       <module name="javaTasks" />
@@ -123,11 +128,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Palindrome" />
         <item itemvalue="Application.WineCatalog" />
+        <item itemvalue="Application.Letter" />
+        <item itemvalue="Application.Palindrome" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.TwentyOne" />
-        <item itemvalue="Application.Letter" />
       </list>
     </recent_temporary>
   </component>
@@ -162,11 +167,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Palindrome/Palindrome.java</url>
-          <line>119</line>
+          <line>115</line>
           <properties class="Palindrome.Palindrome" method="findPositivePalindromes">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/WineCatalog/WineCatalog.java</url>
+          <line>40</line>
+          <properties class="WineCatalog.WineCatalog.Wine" method="yearOfExp">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

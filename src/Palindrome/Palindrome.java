@@ -1,7 +1,5 @@
 package Palindrome;
 
-import java.util.ArrayList;
-
 public class Palindrome {
 
     private static final int intLength = (int)Math.pow(2,31);
@@ -29,7 +27,6 @@ public class Palindrome {
 //            System.out.println(Integer.toBinaryString(i));
         }
     }
-
 
     private static char ZERO = '0';
     private static char ONE = '1';
@@ -76,7 +73,6 @@ public class Palindrome {
         String bitNegativeNumber;
         String halfBit;
         Long number;
-
 
         int k=15;
         for(int i = 32767; i > 0; i--){
@@ -126,80 +122,13 @@ public class Palindrome {
     }
 
     public static void palindrome_v_4(){
-//        findNegativePalindrome();
+        findNegativePalindrome();
         System.out.println("1");
         findPositivePalindromes();
-
-//        System.out.println(Integer.toBinaryString(0));
-//        System.out.println(Integer.toBinaryString(1));
-//        System.out.println(Integer.toBinaryString(-1));
-//        System.out.println(Integer.MAX_VALUE);
-//        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE+1));
-//        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
-//        System.out.println();
     }
 
     public static void main(String[] args) {
         //palindrome_v_3(); //1.5 minutes
-        palindrome_v_4(); //2-2.5 seconds!!!
-
-
-//        palindrome_v_5();
+        palindrome_v_4(); //2-3 seconds!!!
     }
 }
-
-/*    // STAFF I TRIED _(
-
-    ArrayList<String> halfPositNumStr;
-    String bitPosNum_1,bitPosNum_2,saveHPN;
-    int positiveIntNumber;
-    int timesToDo;
-    int k = 2;
-        while (k < 33){
-        k++;
-        if (k % 2 == 1){
-        halfPositNumStr = startingList(k/2+1);
-        timesToDo = 2;
-        label:while (timesToDo != 1){
-        timesToDo = halfPositNumStr.size()-1;
-
-        while (true){
-        if(halfPositNumStr.get(timesToDo) == "1"){
-        halfPositNumStr.set(timesToDo,"0");
-        timesToDo--;
-        continue;
-        } else {
-        halfPositNumStr.set(timesToDo,"1");
-        break;
-        }
-        }
-        bitPosNum_1 = toStrBitMask(halfPositNumStr);
-        saveHPN = halfPositNumStr.get(halfPositNumStr.size()-1);
-        halfPositNumStr.remove(halfPositNumStr.size()-1);
-        bitPosNum_2 = toStrBitMask(halfPositNumStr);
-        halfPositNumStr.add(halfPositNumStr.size(),saveHPN);
-        bitPosNum_1 += new StringBuffer(bitPosNum_2).reverse().toString();
-        System.out.println(bitPosNum_1);
-
-//                    while (true){
-//                        if(halfPositNumStr.get(timesToDo) == "1"){
-//                            halfPositNumStr.set(timesToDo,"0");
-//                            timesToDo--;
-//                            continue;
-//                        } else {
-//                            halfPositNumStr.set(timesToDo,"1");
-//                            bitPosNum_1 = toStrBitMask(halfPositNumStr);
-//                            saveHPN = halfPositNumStr.get(halfPositNumStr.size()-1);
-//                            halfPositNumStr.remove(halfPositNumStr.size()-1);
-//                            bitPosNum_2 = toStrBitMask(halfPositNumStr);
-//                            bitPosNum_1 += new StringBuffer(bitPosNum_2).reverse().toString();
-//                            System.out.println(bitPosNum_1);
-//                            halfPositNumStr.add(halfPositNumStr.size(),saveHPN);
-//                        break;
-//                        }
-//                    }
-        }
-        } else {
-
-        }
-        }*/
