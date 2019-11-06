@@ -107,32 +107,41 @@ public class Palindrome {
     }
     public static void toStrNum(String str){
        String reversedStr = new StringBuffer(str).reverse().toString();
-//       System.out.println(reversedStr+str);
-        System.out.println(Integer.parseInt(reversedStr+str,2));
-//       System.out.println(reversedStr+"0"+str);
-        System.out.println(Integer.parseInt(reversedStr+"0"+str,2));
-//       System.out.println(reversedStr+"1"+str);
-        System.out.println(Integer.parseInt(reversedStr+"1"+str,2));
+//       System.out.println(str+reversedStr);
+        System.out.println(Integer.parseInt(str+reversedStr,2));
+//       System.out.println(str+"0"+reversedStr);
+        System.out.println(Integer.parseInt(str+"0"+reversedStr,2));
+//       System.out.println(str+"1"+reversedStr);
+        System.out.println(Integer.parseInt(str+"1"+reversedStr,2));
     }
 
     private static final int HALF_NUM = (int)Math.pow(2,15);
 
     private static void findPositivePalindromes(){
         String bitHalfMask;
-        for (int muskNumber = 1; muskNumber < HALF_NUM; muskNumber+=2){
+        for (int muskNumber = 1; muskNumber < HALF_NUM; muskNumber+=1){
             bitHalfMask = Integer.toBinaryString(muskNumber);
             toStrNum(bitHalfMask);
         }
     }
 
     public static void palindrome_v_4(){
-        findNegativePalindrome();
+//        findNegativePalindrome();
+        System.out.println("1");
         findPositivePalindromes();
+
+//        System.out.println(Integer.toBinaryString(0));
+//        System.out.println(Integer.toBinaryString(1));
+//        System.out.println(Integer.toBinaryString(-1));
+//        System.out.println(Integer.MAX_VALUE);
+//        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE+1));
+//        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
+//        System.out.println();
     }
 
     public static void main(String[] args) {
         //palindrome_v_3(); //1.5 minutes
-        palindrome_v_4();
+        palindrome_v_4(); //2-2.5 seconds!!!
 
 
 //        palindrome_v_5();

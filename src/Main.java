@@ -13,7 +13,7 @@ public class Main {
 //        Palindrome.palindrome_v_3(); //  ~1.5 min
 
         /*OH, how much time had it taken befire I did it \(=_=)/
-            ~2 seconds !!!!!!!!!!*/
+            ~2 seconds !!!!!!!!!! I found 131071 palindromes (^_^) */
 
         Palindrome.palindrome_v_4(); //
 

@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8696c39a-3a33-44f0-a37f-bd7f00db9446" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/WineCatalog/WineCatalog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/IdenticalNumbers/IdenticalNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/IdenticalNumbers/IdenticalNumbers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Letter/Letter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Letter/Letter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IdenticalNumbers/IdenticalNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IdenticalNumbers/IdenticalNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Letter/Letter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Letter/Letter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Palindrome/Palindrome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Palindrome/Palindrome.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Palindrome/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palindrome/Palindrome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TwentyOne/TwentyOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwentyOne/TwentyOne.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,5 +156,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Palindrome/Palindrome.java</url>
+          <line>119</line>
+          <properties class="Palindrome.Palindrome" method="findPositivePalindromes">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
