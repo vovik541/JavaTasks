@@ -2,10 +2,15 @@ package Palindrome;
 
 public class Palindrome {
 
-    public static void showInt(String bitNegativeNumber){   //here me make positive numbers from negative
+    /*The number of palindromes is so huge, that console cannot keep them all. so if you want to see all palindromes,
+    use findNegativePalindrome(); and findPositivePalindromes(); not in the same time.*/
+
+    public static int INT_BITS = 32;
+
+    public static void showInt(String bitNegativeNumber){   //here we make positive numbers from negative
         char[] charArr = bitNegativeNumber.toCharArray();
 
-        for (int i = 0; i< 32; i++){ //~number
+        for (int i = 0; i< INT_BITS; i++){ //~number
             if(charArr[i]=='1'){
                 charArr[i]='0';
             } else {
@@ -14,18 +19,18 @@ public class Palindrome {
         }
 
         String string = new String(charArr);
-//        System.out.println(string);
-        System.out.println(-Integer.parseInt(string,2)+1);
-//        System.out.println(Integer.toBinaryString(-(Integer.parseInt(string,2)+1)));
+//        System.out.println(string); //inverted negative number
+        System.out.println(-Integer.parseInt(string,2)+1); //inv negative number +1 = positive number
+//        System.out.println(Integer.toBinaryString(-(Integer.parseInt(string,2)+1))); //negative number binary string
     }
 
     private static void findNegativePalindrome(){
         String number;
 
-        for (int i = (int)Math.pow(2,15); i < (int)(Math.pow(2,16)-1); i++){
+        for (int i = (int)Math.pow(2,INT_BITS/2-1); i < (int)(Math.pow(2,INT_BITS/2)-1); i++){
             number = Integer.toBinaryString(i);
             number += new StringBuffer(number).reverse().toString();
-//            System.out.println(number);
+//            System.out.println(number); //negative number binary string
             showInt(number);
         }
     }
@@ -42,7 +47,7 @@ public class Palindrome {
 
     private static void findPositivePalindromes(){
         String bitHalfMask;
-        for (int muskNumber = 1; muskNumber < (int)Math.pow(2,15); muskNumber+=1){
+        for (int muskNumber = 1; muskNumber < (int)Math.pow(2,INT_BITS/2-1); muskNumber+=1){
             bitHalfMask = Integer.toBinaryString(muskNumber);
             toStrNum(bitHalfMask);
         }
