@@ -9,7 +9,7 @@ public class Palindrome {
         int k = 2;
         int j;
 
-        label:for (int i = -2147483645; i < 2147483646; i+=2 ){
+        label:for (int i = Integer.MIN_VALUE; i < Integer.MAX_VALUE; i+=2 ){
             bitLine = Integer.toBinaryString(i).toCharArray();
             j=0;
             k = bitLine.length - 1;
@@ -60,10 +60,13 @@ public class Palindrome {
         System.out.println(-Integer.parseInt(string,2));
     }
 
+    private static int NEG_NUM_OF_PAL = 32767;
+    private static int HALF_INT_BITS = 16;
+
     private static void findNegativePalindrome(){
-        char[] negativePolindromes = new char[16];
+        char[] negativePolindromes = new char[HALF_INT_BITS];
         negativePolindromes[0]='1';
-        for (int j = 1; j < 16; j++){
+        for (int j = 1; j < HALF_INT_BITS; j++){
             negativePolindromes[j] = '0';
         }
 //        String string = new String(negativePolindromes);
@@ -75,8 +78,7 @@ public class Palindrome {
         Long number;
 
         int k=15;
-        for(int i = 32767; i > 0; i--){
-
+        for(int i = NEG_NUM_OF_PAL; i > 0; i--){
 
             if(negativePolindromes[k] != ONE){
                 negativePolindromes[k] = ONE;

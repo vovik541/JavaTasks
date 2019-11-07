@@ -48,7 +48,7 @@ public class WineCatalog {
 
     }
 
-    public static void main(String[] args) {
+    public static void wineCatalog(){
         ArrayList<Wine> wineCatalog = new ArrayList();
 
         wineCatalog.add(new Wine("Dr. Loosen","Germany",2008,5,20));
@@ -64,5 +64,9 @@ public class WineCatalog {
             wine = wineCatalog.get(i);
             System.out.printf("%-15s %-10s %-10d%n",wine.getName(),wine.getCountry(),wineCatalog.get(i).yearOfExp());
         }
+    }
+
+    public static void main(String[] args) {
+        wineCatalog();
     }
 }
