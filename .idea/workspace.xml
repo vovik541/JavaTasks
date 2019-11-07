@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8696c39a-3a33-44f0-a37f-bd7f00db9446" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Flowers/Flowers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Palindrome/Palindrome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Palindrome/Palindrome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/TwentyOne/TwentyOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/TwentyOne/TwentyOne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/WineCatalog/WineCatalog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/WineCatalog/WineCatalog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Palindrome/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palindrome/Palindrome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TwentyOne/TwentyOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwentyOne/TwentyOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WineCatalog/WineCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WineCatalog/WineCatalog.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TwentyOne">
+  <component name="RunManager" selected="Application.Palindrome">
     <configuration name="Flowers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Flowers.Flowers" />
       <module name="javaTasks" />
@@ -131,11 +125,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Palindrome" />
+        <item itemvalue="Application.Letter" />
         <item itemvalue="Application.TwentyOne" />
         <item itemvalue="Application.Flowers" />
-        <item itemvalue="Application.Palindrome" />
         <item itemvalue="Application.WineCatalog" />
-        <item itemvalue="Application.Letter" />
       </list>
     </recent_temporary>
   </component>
