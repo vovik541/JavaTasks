@@ -2,11 +2,9 @@ package Flowers;
 
 import java.util.ArrayList;
 
-//DANGEROUS!!! THIS ALGORITHM WORKS BAD
-
 public class Flowers {
 
-    public static int USER_CASH = 120;
+    public static int USER_CASH = 279;
 
     public static class FlowersClass{
 
@@ -39,11 +37,14 @@ public class Flowers {
         public void setFlowerAmount(int price){
             this.flowerAmount = flowerAmount;
         }
-        public int getSoldAmount(){
-            return this.soldAmount;
+
+        public void buy(){
+            this.soldAmount++;
+            this.flowerAmount--;
         }
-        public void setIsInBouquet(int soldAmount){
-            this.soldAmount = soldAmount;
+        public void turnBack(){
+            this.soldAmount--;
+            this.flowerAmount++;
         }
     }
 
@@ -71,27 +72,129 @@ public class Flowers {
         }
     }
 
-//    public static ArrayList<FlowersClass> getMinOddBouquet(ArrayList<FlowersClass> variety, int userCash){
-//        ArrayList<FlowersClass> bouquet = new ArrayList<>();
-//
-//
-//    }
+    public static void showMessage(int messageStatus, int numberOfFlowers, int shortChange, int numberOfKinds){
+        switch (messageStatus){
+            case 0:System.out.println("You have no money for even one flower!");break;
+            case 1:System.out.println("You have bought "+ numberOfFlowers +" flowers from "+ numberOfKinds +" different kinds. Your account is: "+shortChange+".");break;
+            default:break;
+        }
+    }
+
+    public static int makeMinimumBouquet(ArrayList<FlowersClass> variety, ArrayList<FlowersClass> bouquet, int userCash){
+
+        for (int i = 0; i < variety.size(); i++){
+            if(variety.get(i).getPrice() <= userCash){
+                bouquet.add(variety.get(i));
+                bouquet.get(i).buy();
+                userCash-=bouquet.get(i).price;
+            }else {
+                showMessage(1,i,userCash,i);
+                break;
+            }
+        }
+
+        int numberOfFlowers = bouquet.size()+1;
+        int k = 0;
+
+        while (numberOfFlowers % 2 != 1){
+            if(bouquet.get(k).getFlowerAmount() != 0 && bouquet.get(k).getPrice() <= userCash){
+                bouquet.get(k).buy();
+                userCash -= bouquet.get(k).getPrice();
+                numberOfFlowers++;
+            }
+        }
+
+        if(numberOfFlowers % 2 != 1){
+            userCash += bouquet.get(bouquet.size()-1).getPrice();
+            bouquet.get(bouquet.size()-1).turnBack();
+            bouquet.remove(bouquet.size()-1);
+            numberOfFlowers--;
+        }
+        showMessage(1, numberOfFlowers(bouquet), userCash, bouquet.size());
+        return userCash;
+    }
+
+    public static FlowersClass findTheCheapestFlower(ArrayList<FlowersClass> bouquet){
+        for (int i = 0; i < bouquet.size(); i++){
+            if(bouquet.get(i).flowerAmount != 0){
+                return bouquet.get(i);
+            }
+        }
+        return null;
+    }
+    public static FlowersClass findTheSecondCheapestFlower(ArrayList<FlowersClass> bouquet){
+        for (int i = 0; i < bouquet.size(); i++){
+            if(bouquet.get(i).flowerAmount != 0){
+                for (int j = i+1; j < bouquet.size(); j++){
+                    if(bouquet.get(j).flowerAmount != 0){
+                        return bouquet.get(j);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public static int makeMaxBouquet(ArrayList<FlowersClass> variety, ArrayList<FlowersClass> bouquet, int userCash){
+        int i = 0;
+        FlowersClass theCheapestFlower;
+        FlowersClass theSecondCheapestFlower;
+        while (true){
+            theCheapestFlower = findTheCheapestFlower(bouquet);
+            theSecondCheapestFlower = findTheSecondCheapestFlower(bouquet);
+
+            if(findTheCheapestFlower(bouquet)==null){
+                return userCash;
+            }
+
+            if(theCheapestFlower.getFlowerAmount()/2 > 0){
+                if (userCash >= theCheapestFlower.getPrice()*2){
+                    theCheapestFlower.buy();
+                    theCheapestFlower.buy();
+                    userCash -= theCheapestFlower.getPrice()*2;
+                    continue;
+                } else {
+                    return userCash;
+                }
+            } else if (theCheapestFlower.getFlowerAmount() == 1 && theSecondCheapestFlower.getFlowerAmount() > 1){
+                if (userCash >= theCheapestFlower.getPrice() + theSecondCheapestFlower.getPrice()){
+                    theCheapestFlower.buy();
+                    theSecondCheapestFlower.buy();
+                    userCash -= (theCheapestFlower.getPrice() + theSecondCheapestFlower.getPrice());
+                    continue;
+                } else {
+                    return userCash;
+                }
+            } else {
+                return userCash;
+            }
+        }
+    }
+
+    public static int numberOfFlowers(ArrayList<FlowersClass> bouquet){
+        int num = 0;
+        for(int i = 0; i < bouquet.size(); i++){
+            num += bouquet.get(i).soldAmount;
+//            System.out.println(bouquet.get(i).soldAmount);
+        }
+        return num;
+    }
 
     public static void flowers(){
-        //here we gets all available flowers and sort them by price
-
-        ArrayList<FlowersClass> variety = getAllFlowers();
+        ArrayList<FlowersClass> variety = getAllFlowers(); //here we gets all available flowers and sort them by price
         sortByPrice(variety);
-/*
-        RULE (1)  if the number of flower's variety is odd, we check if the user has enough money for buying at least 1 of each flower
-        RULE (2) else if the number of flower's variety isn't odd, we check
-         if the user has enough money for buying at least 1 of each flower += one more flower (the chippest once)
-        RULE (3) if the user has not enough money for buying by the rules (1)||(2) we are looking for
-        the variant, where the user can buy the biggest odd number of flower's variety
-         (if cannot -> partly use (2) and buy pair number += one the cheapest)
-*/
-//        ArrayList<FlowersClass> user
 
+        ArrayList<FlowersClass> bouquet = new ArrayList<>(); //our bouquet of flowers
+
+        int userCash = USER_CASH;
+
+        if (userCash < variety.get(0).price){  //check if user have enough money to buy the cheapest flower: if yes -> he buys it/
+            showMessage(0,0,0,0);
+        } else {
+            userCash = makeMinimumBouquet(variety,bouquet,userCash);
+            userCash = makeMaxBouquet(variety,bouquet,userCash);
+            showMessage(1,numberOfFlowers(bouquet),userCash,bouquet.size());
+        }
 
     }
 
