@@ -188,7 +188,7 @@ public class Flowers {
 
         int userCash = USER_CASH;
 
-        if (userCash < variety.get(0).price){  //check if user have enough money to buy the cheapest flower: if yes -> he buys it/
+        if (userCash < variety.get(0).price){  //check if user have enough money to buy the cheapest flower
             showMessage(0,0,0,0);
         } else {
             userCash = makeMinimumBouquet(variety,bouquet,userCash);  //makes the minimum "odd numbered" bouquet with maximum flower names
