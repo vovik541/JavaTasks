@@ -6,17 +6,20 @@ import java.util.ArrayList;
 
 public class Flowers {
 
+    public static int USER_CASH = 120;
+
     public static class FlowersClass{
 
         private String name;
         private int price;
         private int flowerAmount;
-//        private boolean isInBouquet = false;
+        private int soldAmount;
 
         public FlowersClass(String name, int price, int flowerAmount) {
             this.name = name;
             this.price = price;
             this.flowerAmount = flowerAmount;
+            this.soldAmount = 0;
         }
         public String getName(){
             return this.name;
@@ -36,15 +39,15 @@ public class Flowers {
         public void setFlowerAmount(int price){
             this.flowerAmount = flowerAmount;
         }
-//        public boolean getIsInBouquet(){
-//            return this.isInBouquet;
-//        }
-//        public void setIsInBouquet(){
-//
-//        }
+        public int getSoldAmount(){
+            return this.soldAmount;
+        }
+        public void setIsInBouquet(int soldAmount){
+            this.soldAmount = soldAmount;
+        }
     }
 
-    public static ArrayList<FlowersClass> fillByFlowers(){
+    public static ArrayList<FlowersClass> getAllFlowers(){
         ArrayList<FlowersClass> variety = new ArrayList<>();
         variety.add(new FlowersClass("Rose",25,12));
         variety.add(new FlowersClass("Bluebell",12,15));
@@ -75,12 +78,19 @@ public class Flowers {
 //    }
 
     public static void flowers(){
-        int userCash = 120;
-        int numberOfFlowers;
+        //here we gets all available flowers and sort them by price
 
-        ArrayList<FlowersClass> variety = fillByFlowers();
+        ArrayList<FlowersClass> variety = getAllFlowers();
         sortByPrice(variety);
-
+/*
+        RULE (1)  if the number of flower's variety is odd, we check if the user has enough money for buying at least 1 of each flower
+        RULE (2) else if the number of flower's variety isn't odd, we check
+         if the user has enough money for buying at least 1 of each flower += one more flower (the chippest once)
+        RULE (3) if the user has not enough money for buying by the rules (1)||(2) we are looking for
+        the variant, where the user can buy the biggest odd number of flower's variety
+         (if cannot -> partly use (2) and buy pair number += one the cheapest)
+*/
+//        ArrayList<FlowersClass> user
 
 
     }
