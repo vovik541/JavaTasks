@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8696c39a-3a33-44f0-a37f-bd7f00db9446" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Flowers/Flowers$FlowersClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Flowers/Flowers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Flowers/Flowers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaTasks/Palindrome/Palindrome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaTasks/Palindrome/Palindrome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Flowers/Flowers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flowers/Flowers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Palindrome/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palindrome/Palindrome.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +29,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/TwentyOne" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

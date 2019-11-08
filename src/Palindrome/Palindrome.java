@@ -20,7 +20,7 @@ public class Palindrome {
 
         String string = new String(charArr);
 //        System.out.println(string); //inverted negative number
-        System.out.println(-Integer.parseInt(string,2)+1); //inv negative number +1 = positive number
+        System.out.println(-(Integer.parseInt(string,2)+1)); //inv negative number +1 = positive number
 //        System.out.println(Integer.toBinaryString(-(Integer.parseInt(string,2)+1))); //negative number binary string
     }
 

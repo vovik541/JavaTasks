@@ -6,43 +6,58 @@ import java.util.ArrayList;
 
 public class Flowers {
 
-    public static class FlowersClass{
+    public enum AllFlower{
+        SUNDAY,
 
-        private String name;
-        private int price;
-        private int flowerAmount;
+    }
+
+    public static void main(String[] args) {
+
+    }
+}
+
+
+
+
+
+/*
+public static class FlowersClass{
+
+    private String name;
+    private int price;
+    private int flowerAmount;
 //        private boolean isInBouquet = false;
 
-        public FlowersClass(String name, int price, int flowerAmount) {
-            this.name = name;
-            this.price = price;
-            this.flowerAmount = flowerAmount;
-        }
-        public String getName(){
-            return this.name;
-        }
-        public void setName(String name){
-            this.name = name;
-        }
-        public int getPrice(){
-            return this.price;
-        }
-        public void setPrice(int price){
-            this.price = price;
-        }
-        public int getFlowerAmount(){
-            return this.flowerAmount;
-        }
-        public void setFlowerAmount(int price){
-            this.flowerAmount = flowerAmount;
-        }
+    public FlowersClass(String name, int price, int flowerAmount) {
+        this.name = name;
+        this.price = price;
+        this.flowerAmount = flowerAmount;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public int getPrice(){
+        return this.price;
+    }
+    public void setPrice(int price){
+        this.price = price;
+    }
+    public int getFlowerAmount(){
+        return this.flowerAmount;
+    }
+    public void setFlowerAmount(int price){
+        this.flowerAmount = flowerAmount;
+    }
 //        public boolean getIsInBouquet(){
 //            return this.isInBouquet;
 //        }
 //        public void setIsInBouquet(){
 //
 //        }
-    }
+}
 
     public static ArrayList<FlowersClass> fillByFlowers(){
         ArrayList<FlowersClass> variety = new ArrayList<>();
@@ -84,8 +99,4 @@ public class Flowers {
 
 
     }
-
-    public static void main(String[] args) {
-        flowers();
-    }
-}
+*/
