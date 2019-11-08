@@ -191,8 +191,10 @@ public class Flowers {
         if (userCash < variety.get(0).price){  //check if user have enough money to buy the cheapest flower: if yes -> he buys it/
             showMessage(0,0,0,0);
         } else {
-            userCash = makeMinimumBouquet(variety,bouquet,userCash);
-            userCash = makeMaxBouquet(variety,bouquet,userCash);
+            userCash = makeMinimumBouquet(variety,bouquet,userCash);  //makes the minimum "odd numbered" bouquet with maximum flower names
+            userCash = makeMaxBouquet(variety,bouquet,userCash);    //take 2 flowers each time and add them to bouquet
+            // makeMaximumBouquet --> (if user still have enough money and if there is more than 1 flower in the market)
+
             showMessage(1,numberOfFlowers(bouquet),userCash,bouquet.size());
         }
 
