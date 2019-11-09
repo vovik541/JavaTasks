@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Flowers {
 
-    public static int USER_CASH = 279;
+    public static int USER_CASH = 400;
 
     public static class FlowersClass{
 
@@ -36,6 +36,10 @@ public class Flowers {
         }
         public void setFlowerAmount(int price){
             this.flowerAmount = flowerAmount;
+        }
+
+        public  int getSoldAmount(){
+            return this.soldAmount;
         }
 
         public void buy(){
@@ -93,7 +97,7 @@ public class Flowers {
             }
         }
 
-        int numberOfFlowers = bouquet.size()+1;
+        int numberOfFlowers = bouquet.size();
         int k = 0;
 
         while (numberOfFlowers % 2 != 1){
@@ -110,29 +114,8 @@ public class Flowers {
             bouquet.remove(bouquet.size()-1);
             numberOfFlowers--;
         }
-        showMessage(1, numberOfFlowers(bouquet), userCash, bouquet.size());
+//        showMessage(1, numberOfFlowers(bouquet), userCash, bouquet.size());
         return userCash;
-    }
-
-    public static FlowersClass findTheCheapestFlower(ArrayList<FlowersClass> bouquet){
-        for (int i = 0; i < bouquet.size(); i++){
-            if(bouquet.get(i).flowerAmount != 0){
-                return bouquet.get(i);
-            }
-        }
-        return null;
-    }
-    public static FlowersClass findTheSecondCheapestFlower(ArrayList<FlowersClass> bouquet){
-        for (int i = 0; i < bouquet.size(); i++){
-            if(bouquet.get(i).flowerAmount != 0){
-                for (int j = i+1; j < bouquet.size(); j++){
-                    if(bouquet.get(j).flowerAmount != 0){
-                        return bouquet.get(j);
-                    }
-                }
-            }
-        }
-        return null;
     }
 
     public static int makeMaxBouquet(ArrayList<FlowersClass> variety, ArrayList<FlowersClass> bouquet, int userCash){
@@ -171,6 +154,50 @@ public class Flowers {
         }
     }
 
+    public static FlowersClass findTheCheapestFlower(ArrayList<FlowersClass> bouquet){
+        for (int i = 0; i < bouquet.size(); i++){
+            if(bouquet.get(i).getFlowerAmount() != 0){
+                return bouquet.get(i);
+            }
+        }
+        return null;
+    }
+
+    public static FlowersClass findTheSecondCheapestFlower(ArrayList<FlowersClass> bouquet){
+        for (int i = 0; i < bouquet.size(); i++){
+            if(bouquet.get(i).getFlowerAmount() != 0){
+                for (int j = i+1; j < bouquet.size(); j++){
+                    if(bouquet.get(j).getFlowerAmount() != 0){
+                        return bouquet.get(j);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public static FlowersClass firstBoughtedCheapest(ArrayList<FlowersClass> bouquet){
+        for (int i = 0; i < bouquet.size(); i++){
+            if(bouquet.get(i).getSoldAmount() > 1){
+                return bouquet.get(i);
+            }
+        }
+        return null;
+    }
+
+    public static FlowersClass secondBoughtedCheapest(ArrayList<FlowersClass> bouquet){
+        for (int i = 0; i < bouquet.size(); i++){
+            if(bouquet.get(i).getSoldAmount() != 0){
+                for (int j = i+1; j < bouquet.size(); j++){
+                    if(bouquet.get(j).getSoldAmount() != 0 && bouquet.get(i).getFlowerAmount() != 0){
+                        return bouquet.get(j);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
     public static int numberOfFlowers(ArrayList<FlowersClass> bouquet){
         int num = 0;
         for(int i = 0; i < bouquet.size(); i++){
@@ -178,6 +205,22 @@ public class Flowers {
 //            System.out.println(bouquet.get(i).soldAmount);
         }
         return num;
+    }
+
+    public static int optimizeBouquet(ArrayList<FlowersClass> variety, ArrayList<FlowersClass> bouquet, int userCash){
+        FlowersClass firtsCheapFlower = firstBoughtedCheapest(bouquet);
+        FlowersClass secondCheapFlower = secondBoughtedCheapest(bouquet);
+
+        while ((userCash+firtsCheapFlower.getPrice()-secondCheapFlower.getPrice()) >= 0){
+            userCash = userCash + firtsCheapFlower.getPrice() - secondCheapFlower.getPrice();
+            firtsCheapFlower.turnBack();
+            secondCheapFlower.buy();
+
+            firtsCheapFlower = firstBoughtedCheapest(bouquet);
+            secondCheapFlower = secondBoughtedCheapest(bouquet);
+        }
+
+        return userCash;
     }
 
     public static void flowers(){
@@ -194,7 +237,8 @@ public class Flowers {
             userCash = makeMinimumBouquet(variety,bouquet,userCash);  //makes the minimum "odd numbered" bouquet with maximum flower names
             userCash = makeMaxBouquet(variety,bouquet,userCash);    //take 2 flowers each time and add them to bouquet
             // makeMaximumBouquet --> (if user still have enough money and if there is more than 1 flower in the market)
-
+//            showMessage(1,numberOfFlowers(bouquet),userCash,bouquet.size());
+            userCash = optimizeBouquet(variety,bouquet,userCash);
             showMessage(1,numberOfFlowers(bouquet),userCash,bouquet.size());
         }
 
