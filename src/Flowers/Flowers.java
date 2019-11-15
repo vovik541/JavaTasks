@@ -238,7 +238,8 @@ public class Flowers {
             userCash = makeMaxBouquet(variety,bouquet,userCash);    //take 2 flowers each time and add them to bouquet
             // makeMaximumBouquet --> (if user still have enough money and if there is more than 1 flower in the market)
 //            showMessage(1,numberOfFlowers(bouquet),userCash,bouquet.size());
-            userCash = optimizeBouquet(variety,bouquet,userCash);
+            userCash = optimizeBouquet(variety,bouquet,userCash);   //this optimize the max cost of the bouquet, if possible
+            //like flowers: 10-9-1 / costsLefted: 12 --> flowers: 9-10-1 / costsLefted: 2
             showMessage(1,numberOfFlowers(bouquet),userCash,bouquet.size());
         }
 
