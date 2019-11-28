@@ -10,13 +10,13 @@ public class Wife extends Human implements ProductListMakable {
 
     @Override
     public void showList(ArrayList<Product> productList){
-        for(int i = 0; i < productList.size(); i++){
-            System.out.println(productList.get(i).getProduckName());
+        for(Product product:productList){
+            System.out.println(product.getProduckName());
         }
     }
 
     @Override
-    public void showList(int totalPrice){
-        System.out.println(totalPrice);
+    public void showTotalPrice(int totalPrice){
+        System.out.print(totalPrice);
     }
 }

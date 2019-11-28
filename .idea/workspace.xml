@@ -44,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -57,6 +57,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -103,7 +104,9 @@
       <workItem from="1574791652131" duration="252000" />
       <workItem from="1574856256462" duration="4922000" />
       <workItem from="1574861217474" duration="111000" />
-      <workItem from="1574861360000" duration="3599000" />
+      <workItem from="1574861360000" duration="3838000" />
+      <workItem from="1574947254883" duration="8266000" />
+      <workItem from="1574967562025" duration="3369000" />
     </task>
     <servers />
   </component>
