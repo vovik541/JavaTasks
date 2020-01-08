@@ -1,0 +1,36 @@
+2020-01-08 18:54:04 INFO  Main:70 - menuFormatter created
+2020-01-08 18:54:09 INFO  Main:151 - User gave userInput
+2020-01-08 18:54:09 INFO  Main:172 - The deserialization started
+2020-01-08 18:54:09 INFO  Main:189 - getting the paths
+2020-01-08 18:54:09 INFO  Main:201 - paths were gotten. Returning the path by pathNum
+2020-01-08 18:54:09 INFO  Main:177 - The deserialization finished
+2020-01-08 18:55:17 INFO  Main:151 - User gave userInput
+2020-01-08 18:55:21 INFO  Main:151 - User gave userInput
+2020-01-08 18:55:21 INFO  Main:97 - Started sorting
+2020-01-08 18:55:21 INFO  Main:101 - Sorted
+2020-01-08 18:55:22 INFO  Main:151 - User gave userInput
+2020-01-08 18:55:22 INFO  Main:97 - Started sorting
+2020-01-08 18:55:22 INFO  Main:101 - Sorted
+2020-01-08 18:55:25 INFO  Main:151 - User gave userInput
+2020-01-08 18:55:25 INFO  Main:157 - The serialization started
+2020-01-08 18:55:25 INFO  Main:189 - getting the paths
+2020-01-08 18:55:25 INFO  Main:201 - paths were gotten. Returning the path by pathNum
+2020-01-08 18:55:25 INFO  Main:162 - The serialization finished
+2020-01-08 19:29:02 INFO  Main:70 - menuFormatter created
+2020-01-08 19:29:06 INFO  Main:151 - User gave userInput
+2020-01-08 19:29:06 INFO  Main:172 - The deserialization started
+2020-01-08 19:29:06 INFO  Main:189 - getting the paths
+2020-01-08 19:29:06 INFO  Main:201 - paths were gotten. Returning the path by pathNum
+2020-01-08 19:29:06 INFO  Main:177 - The deserialization finished
+2020-01-08 19:32:23 INFO  Main:70 - menuFormatter created
+2020-01-08 19:35:05 INFO  Main:151 - User gave userInput
+2020-01-08 19:35:05 INFO  Main:172 - The deserialization started
+2020-01-08 19:35:05 INFO  Main:189 - getting the paths
+2020-01-08 19:35:05 INFO  Main:201 - paths were gotten. Returning the path by pathNum
+2020-01-08 19:35:05 INFO  Main:177 - The deserialization finished
+2020-01-08 19:35:38 INFO  Main:70 - menuFormatter created
+2020-01-08 19:35:40 INFO  Main:151 - User gave userInput
+2020-01-08 19:35:40 INFO  Main:172 - The deserialization started
+2020-01-08 19:35:40 INFO  Main:189 - getting the paths
+2020-01-08 19:35:40 INFO  Main:201 - paths were gotten. Returning the path by pathNum
+2020-01-08 19:35:40 INFO  Main:177 - The deserialization finished
